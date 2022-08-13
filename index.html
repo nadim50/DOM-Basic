@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        h1 {
+            color: rgb(128, 114, 250);
+        }
+
+        .fruit-container li {
+            color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>Welcome to DOM</h1>
+    <h1>Welcome to BOM</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, dolorum.</p>
+
+    <main>
+
+        <section class="fruit-container" id="fruit-container">
+            <h1 id="fruit" class="n m u k kk">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Mango</li>
+                <li>Orange</li>
+                <li>Banana</li>
+            </ul>
+        </section>
+
+        <section id="places-container">
+            <h1 id="place">Places I like visit </h1>
+            <ul>
+                <li class="p">sundarbon</li>
+                <li class="p">katabon</li>
+                <li class="p">bandorbon</li>
+                <li>salbon</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>Dom de baba</h1>
+            <ul>
+                <li>jalali</li>
+                <li>shafat</li>
+                <li>bonobas</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="dom.js"></script>
+    <script>
+        const headings = document.getElementsByTagName('h1');
+        for (const h1 of headings) {
+            console.log(h1);
+        }
+
+        /// getElementsByTagName
+
+        const lii = document.getElementsByTagName('li');
+        for (const li of lii) {
+            console.log(li.innerText);
+        }
+
+        console.log('inside the html file');
+
+        /// getElementById
+
+        const fruits = document.getElementById('fruit');
+        console.log(fruits.innerText = 'Nadim Fruits');
+
+        /// getElementsByClassName
+        const place = document.getElementsByClassName('p');
+        for (const p1 of place) {
+            console.log(p1.innerText);
+        }
+
+        /// queryAllselctor
+        /// queryAllselctorAll
+
+        const someli = document.querySelectorAll('.fruit-container li');
+
+        for (const li of someli) {
+            console.log(li.innerText);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
